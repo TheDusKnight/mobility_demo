@@ -8,7 +8,7 @@ const DemoLine = () => {
   }, []);
 
   const asyncFetch = () => {
-    fetch('http://localhost:8090/json')
+    fetch('https://raw.githubusercontent.com/TheDusKnight/mobility_demo/test/src/data/mobility_demo.json')
       .then(response => response.json())
       .then(json => setData(json))
       .catch(error => {
