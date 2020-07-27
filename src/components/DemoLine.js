@@ -8,7 +8,7 @@ const DemoLine = () => {
   }, []);
 
   const asyncFetch = () => {
-    fetch('https://raw.githubusercontent.com/TheDusKnight/mobility_demo/test/src/data/mobility_demo.json')
+    fetch('https://raw.githubusercontent.com/TheDusKnight/mobility_demo/test/src/data/mobility_demo_small.json')
       .then(response => response.json())
       .then(json => setData(json))
       .catch(error => {
@@ -19,12 +19,12 @@ const DemoLine = () => {
   const config = {
     title: {
       visible: true,
-      text: '2000 ~ 2018 年各国家 GDP 趋势对比',
+      text: 'Transit Stations Rate from 02-15 to 7-20',
     },
     description: {
       visible: true,
       text:
-        '图形标签 (label) 位于折线尾部\uFF0C用于标注整根折线\uFF0C并有带有排名的含义在其中\u3002',
+        'Label california, Florida, New Mexico, New York, Texas rate change',
     },
     padding: [20, 100, 30, 80],
     forceFit: true,
@@ -40,7 +40,8 @@ const DemoLine = () => {
       },
     },
     yAxis: {
-      formatter: v => `${(v / 1000000000).toFixed(1)} B`,
+      // formatter: v => `${(v / 1000000000).toFixed(1)} Rate Change`,
+      formatter: v => `${(v)} Rate Change`,
     },
     legend: {
       visible: false,
@@ -54,7 +55,7 @@ const DemoLine = () => {
         animation: 'clipingWithData',
       },
     },
-    smooth: true,
+    smooth: false,
   };
   return <Line {...config} />;
 };
