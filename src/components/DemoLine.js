@@ -8,7 +8,7 @@ const DemoLine = () => {
   }, []);
 
   const asyncFetch = () => {
-    fetch('https://raw.githubusercontent.com/TheDusKnight/mobility_demo/test/src/data/small.json')
+    fetch('https://raw.githubusercontent.com/TheDusKnight/mobility_demo/test/src/data/mobility_demo.json')
       .then(response => response.json())
       .then(json => setData(json))
       .catch(error => {
@@ -29,8 +29,8 @@ const DemoLine = () => {
     padding: [20, 100, 30, 80],
     forceFit: true,
     data,
-    xField: 'year',
-    yField: 'gdp',
+    xField: 'date',
+    yField: 'value',
     seriesField: 'name',
     xAxis: {
       type: 'dateTime',
