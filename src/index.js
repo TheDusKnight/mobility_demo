@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App';
-import Page from './components/Page'
+// import App from './components/App';
+// import Page from './components/Page'
 import * as serviceWorker from './serviceWorker';
+import DemoLine from "./components/DemoLine";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/*<App />*/}
-    <Page />
+    <DemoLine />
   </React.StrictMode>,
   document.getElementById('root')
 );
