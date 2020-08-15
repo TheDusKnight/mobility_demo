@@ -5,6 +5,7 @@ import './index.css';
 // import Page from './components/Page'
 import * as serviceWorker from './serviceWorker';
 import DemoLine from "./components/DemoLine";
+import Album from "./components/Album";
 
 ReactDOM.render(
   <React.StrictMode>
